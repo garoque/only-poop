@@ -4,7 +4,7 @@
       Compartilhe e monetize trechos de código
     </h1>
     <p class="text-balance mb-8 text-xl lg:text-3xl text-center text-black">
-      Ganhe uma renda extra com os códigos que você faz no dia-a-dia.
+      Ganhe uma renda extra com os códigos que você faz no dia a dia.
     </p>
 
     <div class="flex flex-col justify-center items-center">

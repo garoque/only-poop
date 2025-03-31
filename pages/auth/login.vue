@@ -2,7 +2,7 @@
 import Login from '@/modules/auth/screens/Login/Login.vue'
 
 useHead({
-  title: 'Entrar | 💩 onlypoop',
+  title: 'Entrar | 💩 poop gists',
 })
 
 definePageMeta({

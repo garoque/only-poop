@@ -13,7 +13,7 @@ const props = withDefaults(
   defineProps<{
     isPaid: boolean
     loading: boolean
-    code: string
+    code?: string
     lang: string
   }>(),
   {
@@ -38,9 +38,13 @@ const registerSyntaxHighlight = async () => {
   loading.value = false
 }
 
-onMounted(() => {
-  registerSyntaxHighlight()
-})
+watch(
+  () => props.code,
+  () => {
+    registerSyntaxHighlight()
+  },
+  { immediate: true },
+)
 </script>
 
 <template>

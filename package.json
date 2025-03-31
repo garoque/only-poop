@@ -7,18 +7,30 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "db:generate-types": "supabase gen types typescript --local > ./libs/supabase/schema.ts"
   },
   "dependencies": {
+    "@guolao/vue-monaco-editor": "^1.5.5",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "@nuxtjs/seo": "3.0.1",
+    "@nuxtjs/supabase": "^1.4.6",
     "@primevue/themes": "^4.2.5",
+    "@supabase/supabase-js": "^2.48.1",
+    "@vueuse/core": "^12.8.2",
     "@wooorm/starry-night": "^3.6.0",
+    "axios": "^1.8.2",
+    "detect-programming-language": "^1.0.4",
     "hast-util-to-html": "^9.0.4",
     "marked": "^15.0.6",
+    "maska": "^3.1.0",
     "nuxt": "^3.15.2",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
+    "uuid": "^11.1.0",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
