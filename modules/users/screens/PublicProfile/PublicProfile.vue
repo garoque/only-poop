@@ -24,13 +24,7 @@ const { gists, fetchMoreGistsByUsername, loading } = useGistList({
   username: route.params.username as string,
 })
 
-const {
-  loading: reportLoading,
-  totalGists,
-  totalFreeGists,
-  totalPaidGists,
-  totalSoldGists,
-} = useGistsReport({ user, isMyself: false })
+const { loading: reportLoading, totalGists, totalFreeGists, totalPaidGists } = useGistsReport({ user, isMyself: false })
 
 const { arrivedState } = useScroll(window, {
   offset: { bottom: 100 },
@@ -52,6 +46,22 @@ const handleNavigateToDetail = (id: string) => {
 
   router.push(`/${username}/gist/${id}`)
 }
+
+defineOgImage({
+  component: 'PublicProfile',
+  props: {
+    author: user.value?.name || '',
+    avatarUrl: user.value?.avatarUrl,
+    bio: user.value?.bio,
+  },
+})
+
+useSeoMeta({
+  title: `${user.value?.name} - @${user.value?.username}`,
+  ogTitle: `${user.value?.name} - @${user.value?.username}`,
+  description: `Veja os gists de ${user.value?.name} no poop gists.`,
+  ogDescription: `Veja os gists de ${user.value?.name} no poop gists.`,
+})
 </script>
 
 <template>

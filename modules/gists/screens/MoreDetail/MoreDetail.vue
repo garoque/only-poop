@@ -43,6 +43,21 @@ const { gistContent, loading: loadingContent } = useGistContent({
 const handleNavigateToGistEdit = () => {
   router.push(`/app/gist/${route.params.id}/edit`)
 }
+
+defineOgImage({
+  component: 'GistDetail',
+  props: {
+    title: `${gist?.value?.title} by @${gist?.value?.profiles.username}`,
+    description: `Veja o gist de ${gist?.value?.profiles.name} no poop gists.`,
+  },
+})
+
+useSeoMeta({
+  title: `${gist?.value?.title} by @${gist?.value?.profiles.username}`,
+  ogTitle: `${gist?.value?.title} by @${gist?.value?.profiles.username}`,
+  description: `Veja o gist de ${gist?.value?.profiles.name} no poop gists.`,
+  ogDescription: `Veja o gist de ${gist?.value?.profiles.name} no poop gists.`,
+})
 </script>
 
 <template>

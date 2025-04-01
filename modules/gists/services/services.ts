@@ -49,7 +49,7 @@ export default (client: SupabaseClient<Database>) => ({
   async readOne(id: string) {
     const response = await client
       .from('gists')
-      .select('id, title, description, price, lang, is_paid, profiles (id, username)')
+      .select('id, title, description, price, lang, is_paid, profiles (id, name, username)')
       .match({ id })
       .returns<ReadOneRow>()
       .single()

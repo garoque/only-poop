@@ -3,13 +3,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@primevue/nuxt-module',
-    '@nuxtjs/supabase',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/seo',
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@primevue/nuxt-module', '@nuxtjs/supabase', '@nuxtjs/color-mode', '@nuxtjs/seo'],
 
   css: ['primeicons/primeicons.css'],
 
@@ -19,6 +13,10 @@ export default defineNuxtConfig({
 
   imports: {
     dirs: ['./composables/useMarkdown', './composables/useServices', './composables/useLogger'],
+  },
+
+  site: {
+    url: process.env.SITE_URL,
   },
 
   supabase: {
